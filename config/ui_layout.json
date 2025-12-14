@@ -1,0 +1,48 @@
+{
+"context_inputs": [
+{
+"id": "san",
+"label": "SAN:",
+"type": "dropdown",
+"x": 10,
+"y": "input_start_y",
+"width": 100,
+"height": 30,
+"options": ["안정", "균열", "착란", "붕괴"],
+"initial": "안정",
+"open_upward": true
+},
+{
+"id": "sadism",
+"label": "Sadism:",
+"type": "dropdown",
+"x": 200,
+"y": "input_start_y",
+"width": 100,
+"height": 30,
+"options": ["혐오", "불쾌", "무관심", "호기심", "애착", "탐닉"],
+"initial": "무관심",
+"open_upward": true
+},
+{
+"id": "emotion",
+"label": "L.Emotion:",
+"type": "text_input",
+"x": 480,
+"y": "input_start_y",
+"width": 100,
+"height": 30,
+"initial": "평온"
+},
+{
+"id": "topic",
+"label": "L.Topic:",
+"type": "text_input",
+"x": 670,
+"y": "input_start_y",
+"width": 120,
+"height": 30,
+"initial": "새로운 관리자를 기다리는 중"
+}
+]
+}

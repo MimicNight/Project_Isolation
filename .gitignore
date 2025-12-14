@@ -1,0 +1,40 @@
+# ----------------------------------------
+# 기본 시스템 및 환경 설정
+# ----------------------------------------
+__pycache__/
+*.pyc
+.env
+venv/
+.venv/
+.idea/
+.vscode/
+
+# ----------------------------------------
+# 1. RAG 임베딩 모델 (폴더 구조만 유지)
+# ----------------------------------------
+assets/models/embedding/KURE-v1-yuhwa-final/*
+!assets/models/embedding/KURE-v1-yuhwa-final/.gitkeep
+
+# ----------------------------------------
+# 2. GPT-SoVITS (Run_TTS_Server.bat 제외하고 전부 무시)
+# ----------------------------------------
+# 일단 해당 폴더 안의 모든 것을 무시
+assets/GPT-SoVITS-v2-240821/*
+
+# [예외 1] 실행 스크립트는 살려둔다
+!assets/GPT-SoVITS-v2-240821/Run_TTS_Server.bat
+
+# [예외 2] 의존성 파일이 있다면 살려둔다 (필요시)
+!assets/GPT-SoVITS-v2-240821/requirements_tts.txt
+
+# ----------------------------------------
+# 3. 오디오 에셋 제외 설정
+# ----------------------------------------
+
+# 1) 참조 음성 (저작권 보호 - mp3 파일들)
+assets/audio/samples/*
+!assets/audio/samples/.gitkeep
+
+# 2) TTS 생성 결과물 (런타임 생성 파일 - wav)
+assets/audio/outputs/*
+!assets/audio/outputs/.gitkeep

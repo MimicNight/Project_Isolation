@@ -1,0 +1,177 @@
+{
+  "metadata": {
+    "version": "1.2",
+    "description": "Visual Novel Assets Configuration (Position & Scale Control)",
+    "license": "MIT"
+  },
+
+  "paths": {
+    "assets_dir": "assets",
+    "background_anim": "assets/backgrounds/room_noise",
+    
+    "objects": {
+      "desk": {
+        "path": "assets/objects/desk.png",
+        "width": 1500,
+        "x": 70,
+        "y": 160
+      },
+      "lamp_off": {
+        "path": "assets/objects/lamp_off.png",
+        "width": 110,
+        "x": 325,
+        "y": 325
+      },
+      "lamp_on": {
+        "path": "assets/objects/lamp_on.png",
+        "width": 110,
+        "x": 325,
+        "y": 325
+      }
+    }
+  },
+
+"character": {
+    "name": "yuhwa",
+    "base_path": "assets/characters/yuhwa",
+    "default_state": "neutral",
+    
+    "x": 650,
+    "y": 130,
+
+    "animation_states": {
+        "neutral": { 
+            "loop": true,
+            "width": 229,
+            "height": 465,
+            "x_offset": 0,
+            "y_offset": 0
+        },
+        
+        "thinking_loop": { 
+            "loop": true, 
+            "width": 800, 
+            "height": 550, 
+            "x_offset": -250, 
+            "y_offset": -20 
+        },
+        
+        "smile": { 
+            "loop": true,
+            "width": 930,
+            "height": 520,
+            "x_offset": -350,
+            "y_offset": -10
+        },
+        "angry": { 
+            "loop": true,
+            "width": 930,
+            "height": 520,
+            "x_offset": -350,
+            "y_offset": -10
+        },
+        "sad": { 
+            "loop": true,
+            "width": 330,
+            "height": 465,
+            "x_offset": 0,
+            "y_offset": 0
+        },
+        "scared": { 
+            "loop": true,
+            "width": 330,
+            "height": 465,
+            "x_offset": 0,
+            "y_offset": 0
+        }
+    }
+  },
+
+"tts": {
+    "enabled": true,
+    "engine": "gpt-sovits",
+    "api_url": "http://127.0.0.1:9880/tts",
+    
+    "default_emotion": "neutral", 
+
+    "emotion_maps": {
+      "neutral": {
+        "path": "assets/audio/samples/neutral.mp3",
+        "text": "너한테 문자가 왔어요, 인간아.",
+        "lang": "ko"
+      },
+      "annoyed": {
+        "path": "assets/audio/samples/annoyed.mp3",
+        "text": "진짜 민감하고 예의 없네요 인간아.",
+        "lang": "ko"
+      },
+      "angry": {
+        "path": "assets/audio/samples/angry.mp3",
+        "text": "그 편지는 뭔가 잘못된 게 분명해요! 왜 언니가!",
+        "lang": "ko"
+      },
+      "san": {
+        "path": "assets/audio/samples/san.mp3",
+        "text": "저럴 수밖에 없다는데... 나는... 나 같은 게...",
+        "lang": "ko"
+      }
+    },
+
+    "text_lang": "ko",
+    "output_path": "assets/audio/outputs/tts_output.wav",
+    "encoding": "utf-8",
+    "synthesis_params": {
+      "speed_factor": 1.0,
+      "temperature": 1.0,
+      "top_p": 0.9,
+      "timeout": 60
+    }
+  },
+
+  "stt": {
+    "enabled": true,
+    "engine": "whisper",
+    "model": "small",
+    "language": "ko",
+    "record_seconds": 5
+  },
+
+  "sound": {
+      "bgm_enabled": true,
+      "bgm_volume": 0.5,
+      "bgm_tracks": {
+        "hum": "assets/sound/bgm_hum.wav",
+        "quiet": "assets/sound/bgm_quiet.wav",
+        "glitch": "assets/sound/bgm_glitch.wav"
+      },
+      "sfx_enabled": true,
+      "sfx_paths": {
+        "tap_soft": "assets/sound/sfx_tap_soft.wav",
+        "tap_hard": "assets/sound/sfx_tap_hard.wav",
+        "click": "assets/sound/sfx_click.wav"
+      }
+    },
+    
+  "ui": {
+      "background_enabled": false
+  },
+
+  "ui_settings": {
+    "dialogue_box": {
+      "x": 50,
+      "y": 80,
+      "width": 550,
+      "height": 200,
+      "font_path": "assets/Silver.ttf",
+      "font_size": 25
+    },
+    "input_box": {
+      "x": 50,
+      "y": 50,
+      "width": 500,
+      "height": 35,
+      "font_path": "assets/Silver.ttf",
+      "font_size": 25
+    }
+  }
+}
