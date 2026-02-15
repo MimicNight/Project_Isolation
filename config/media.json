@@ -97,22 +97,22 @@
     "emotion_maps": {
       "neutral": {
         "path": "assets/audio/samples/neutral.mp3",
-        "text": "너한테 문자가 왔어요, 인간아.",
+        "text": "",
         "lang": "ko"
       },
       "annoyed": {
         "path": "assets/audio/samples/annoyed.mp3",
-        "text": "진짜 민감하고 예의 없네요 인간아.",
+        "text": "",
         "lang": "ko"
       },
       "angry": {
         "path": "assets/audio/samples/angry.mp3",
-        "text": "그 편지는 뭔가 잘못된 게 분명해요! 왜 언니가!",
+        "text": "",
         "lang": "ko"
       },
       "san": {
         "path": "assets/audio/samples/san.mp3",
-        "text": "저럴 수밖에 없다는데... 나는... 나 같은 게...",
+        "text": "",
         "lang": "ko"
       }
     },
