@@ -314,13 +314,10 @@ python main.py
 * **Font:** Silver.ttf (CC BY 4.0 / Created by Poppy Works)
 * **Sound:** Sonniss GDC Audio Bundle (Standard Royalty Free License)
 * **Voice Reference:** 'The Fox Awaits Me: Hwa' (See Disclaimer below)
-### ⚠️ Voice Asset Disclaimer
-본 프로젝트의 TTS 학습을 위해 사용된 참조 음성(Reference Audio)은 모바일 비주얼 노블 '**당신을 기다리는 여우 화**(The Fox Awaits Me: Hwa)'의 캐릭터 보이스를 사용하였습니다.
-
-* **Usage Purpose:** 본 프로젝트는 **순수 교육 및 연구/개발(R&D) 목적**으로 진행되었으며, 수익 창출 의도가 없습니다.
-* **Data Acquisition:** 데이터마이닝이나 크랙킹 없이, 게임 내 보이스를 **단순 녹음**(Direct Recording)하거나, **정식으로 제공된 특전 보이스 파일**을 사용하여, 실황 중계나 재배포 없이 오직 학습 데이터로만 활용하였습니다.
-* **No Distribution:** 원작자의 저작권을 존중하여, **학습된 모델 체크포인트(.pth, .ckpt)와 정제된 음성 데이터셋은 GitHub에 업로드하거나 공유하지 않습니다.**
-* **Future Plan:** 본 프로젝트를 발전시켜 배포하거나 상용화할 경우, 정식으로 성우를 고용하거나 라이선스 된 데이터를 구매하여 대체할 예정입니다.
+### 🔊 Audio System (Work in Progress)
+본 프로젝트는 **LLM 기반의 실시간 대사 생성**과 **감정 표현 TTS** 파이프라인을 검증하기 위한 R&D 프로젝트입니다.
+* **Current Status:** 현재 프로토타입에는 연구용 임시 데이터셋 및 오픈소스 모델이 적용되어 있습니다.
+* **Future Plan:** 정식 릴리즈 및 상용화 단계에서는 **전문 성우 녹음** 또는 **라이선스가 확보된 상용 AI 보이스**로 전면 교체하여, 저작권 이슈 없는 클린한 서비스를 제공할 예정입니다.
 ---
 **Developed by 오픈닭강정 (조강건(조장) / 문정규)**
 * 📧 **Contact:** whrkdrjs13@gmail.com (설치 및 실행 관련 문의)
