@@ -211,31 +211,25 @@ pip install -r requirements.txt
 ```
 
 ### 3. 모델 및 에셋 배치 (Model Setup)
-본 프로젝트는 실행을 위해 대용량 AI 모델이 필요합니다.
+본 프로젝트는 정상 구동을 위해 대용량 AI 모델과 의존성 파일 배치가 필수적입니다.
 #### 1) RAG 데이터 (세계관/캐릭터 설정)
 * **Vector DB 및 Embedding Model:** 용량 및 파일 관리 목적으로 GitHub 저장소에는 포함되지 않았습니다. 아래 링크에서 다운로드하여 배치해주세요.
     * **📥 다운로드:** [Google Drive Link (공개)](https://drive.google.com/file/d/1qXvDcouX82xmA8__wtClH0tq1Mjoa-s0/view?usp=sharing)
-#### 2) TTS 모델 (GPT-SoVITS)
-* **Voice Model:** 학습에 사용된 음성 데이터의 저작권 보호를 위해 **공개 배포하지 않습니다.**
-    * **🎓 평가자 안내:** 교수님께는 **이클래스(E-Class) 과제 제출**로 암호화된 모델의 다운로드 링크와 비밀번호를 별도 전달해 드렸습니다. 현 학기가 종료되면, 다운로드 링크는 비활성화 예정입니다.
-#### 3) 참조 음성 (Reference Audio)
-* **Ref Audio (.mp3):** TTS가 감정을 표현하기 위해 참조하는 원본 음성 파일입니다. 저작권 보호를 위해 **공개 배포하지 않으며**, TTS 모델과 함께 제공됩니다.
-    * **📥 다운로드:** **평가자용 비공개 링크**(Google Drive)에 포함되어 있습니다.
-    * **📂 배치 경로:** 다운로드한 `.mp3` 파일들을 아래 경로에 넣어주세요.
-        * `assets/audio/samples/`
-          *(포함 파일: angry.mp3, annoyed.mp3, neutral.mp3, san.mp3)*
-> **Note:** 참조 음성이 없으면 오류가 발생할 수 있습니다. 반드시 배치해 주세요.
-* **📂 배치 경로:**
-    * **RAG Embedding Model:** `assets/models/embedding/KURE-v1-yuhwa-final/`
-    * **Vector DB:** `assets/database/vectordb/`
-    * **GPT Models:** `assets/GPT-SoVITS-v2-240821/GPT_weights_v2/(파일명).ckpt`
-    * **SoVITS Models:** `assets/GPT-SoVITS-v2-240821/SoVITS_weights_v2/(파일명).pth`
-#### 📂 폴더 구조 및 배치 방법
-본 저장소의 `assets` 폴더 내부에는 모델을 넣을 빈 폴더와 필수 실행 파일(`Run_TTS_Server.bat`)이 미리 준비되어 있습니다.
+#### 2) TTS 모델 및 참조 음성 (Voice Model & Audio)
+* **Status:** 학습에 사용된 음성 데이터의 저작권 보호 및 보안상의 이유로, **모델 가중치(.ckpt, .pth)와 참조 음성(.mp3)은 공개 리포지토리에서 제외**되었습니다.
+    * **📢 안내:** 본 리포지토리는 **소스 코드 및 시스템 아키텍처 검토**를 목적으로 공개되었습니다. 모델 파일 부재로 인해 로컬에서의 즉시 실행은 제한될 수 있습니다.
+      *(상용화 단계에서는 라이선스가 확보된 데이터로 재학습하여 배포될 예정입니다.)*
+#### 📂 폴더 구조 및 배치 경로 (File Directory)
+보유하고 계신 모델 파일이나 다운로드한 RAG 데이터를 아래 경로에 정확히 위치시켜야 합니다.
+* **RAG Embedding Model:** `assets/models/embedding/KURE-v1-yuhwa-final/`
+* **Vector DB:** `assets/database/vectordb/`
+* **Ref Audio:** `assets/audio/samples/` (angry.mp3, neutral.mp3 등)
+* **GPT Weights:** `assets/GPT-SoVITS-v2-240821/GPT_weights_v2/(파일명).ckpt`
+* **SoVITS Weights:** `assets/GPT-SoVITS-v2-240821/SoVITS_weights_v2/(파일명).pth`
 > **💡 설치 팁 (Windows 기준)**
-> 다운로드 받은 **`GPT-SoVITS-v2-240821`** 폴더를 그대로 **`assets`** 폴더 안으로 복사(드래그)해 넣으세요.
+> 다운로드 받은 **`GPT-SoVITS-v2-240821`** 폴더를 그대로 프로젝트의 **`assets`** 폴더 안으로 복사(드래그)해 넣으세요.
 > * 윈도우가 **"폴더를 통합(병합)하시겠습니까?"** 라고 물으면 '예'를 누르시면 됩니다.
-> * 이렇게 하면 기존에 들어있는 실행 스크립트는 유지되면서, 필요한 모델 파일만 자동으로 채워집니다.
+> * 이렇게 하면 기존에 들어있는 실행 스크립트(`Run_TTS_Server.bat`)는 유지되면서, 필요한 모델 파일만 자동으로 채워집니다.
 
 ### 4. Local LLM 설정 및 모델 변경 (Ollama)
 본 게임은 **Ollama의 클라우드 추론 서비스**를 활용하여, 로컬 GPU 사양과 관계없이 **DeepSeek-V3(671B), Qwen, GPT-OSS** 등 초거대 모델을 구동할 수 있도록 설계되었습니다.
