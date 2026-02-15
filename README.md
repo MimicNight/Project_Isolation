@@ -313,11 +313,11 @@ python main.py
 ### Assets
 * **Font:** Silver.ttf (CC BY 4.0 / Created by Poppy Works)
 * **Sound:** Sonniss GDC Audio Bundle (Standard Royalty Free License)
-* **Voice Reference:** 'The Fox Awaits Me: Hwa' (See Disclaimer below)
-### Audio System (Work in Progress)
+* **Voice Reference:** Internal R&D Dataset (Temporary / Non-commercial)
+### Audio System
 본 프로젝트는 **LLM 기반의 실시간 대사 생성**과 **감정 표현 TTS** 파이프라인을 검증하기 위한 R&D 프로젝트입니다.
 * **Current Status:** 현재 프로토타입에는 연구용 임시 데이터셋 및 오픈소스 모델이 적용되어 있습니다.
-* **Future Plan:** 정식 릴리즈 및 상용화 단계에서는 **전문 성우 녹음** 또는 **라이선스가 확보된 상용 AI 보이스**로 전면 교체하여, 저작권 이슈 없는 클린한 서비스를 제공할 예정입니다.
+* **Future Plan:** 정식 릴리즈 및 상용화 단계에서는 전문 성우 녹음 또는 라이선스가 확보된 상용 AI 보이스로 전면 교체하여, 상용화 가능한 수준의 저작권 기준을 준수할 예정입니다.
 ---
 **Developed by 오픈닭강정 (조강건(조장) / 문정규)**
 * 📧 **Contact:** whrkdrjs13@gmail.com (설치 및 실행 관련 문의)
